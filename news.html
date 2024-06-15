@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming News - Course Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9201482064549311"
+     crossorigin="anonymous"></script>
+    <style>
+        /* Existing styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .news-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #eaeaea;
+            border-radius: 5px;
+        }
+        .news-item h2 {
+            margin: 0;
+            color: #333;
+        }
+        .news-item p {
+            margin: 10px 0;
+            color: #666;
+        }
+        .news-item .date {
+            font-size: 14px;
+            color: #888;
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+        }
+        .footer a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .footer .date {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Back to top button styles */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            display: none; /* Hidden by default */
+        }
+        .announcement-bar {
+            background-color: #007bff;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+        }
+        .announcement-bar a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        /* Responsive adjustments */
+        @media screen and (max-width: 768px) {
+            .announcement-bar {
+                font-size: 14px;
+            }
+        }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+        }
+
+        .back-button:hover { background-color: #3e8e41 }
+
+        .back-button:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+    </style>
+</head>
+<body>
+    <a href="course.html" class="back-button">Home</a>
+    <br>
+    <div class="announcement-bar">
+        <p>📢 <strong>Exciting News:</strong> Our new course on Advanced JavaScript is now available! <a href="#">Learn more</a></p>
+    </div>
+    <br>
+    <div class="announcement-bar">
+        <p>📢 <strong>Exciting News:</strong> Our new course on Advanced next js and react js is now available! <a href="#">Learn more</a></p>
+    </div>
+    <!-- Existing content -->
+    <div class="container">
+        <div class="news-item">
+            <h2>Exciting New Course Launch!</h2>
+            <p>Our latest course on Advanced JavaScript is now available. Learn cutting-edge techniques and boost your web development skills.</p>
+            <p class="date">announced shortly</p>
+        </div>
+        <div class="news-item">
+            <h2>Upcoming Webinar: AI in Web Design</h2>
+            <p>Join our live webinar on AI-driven design trends. Discover how artificial intelligence is shaping the future of web development.</p>
+            <p class="date">announced shortly</p>
+        </div>
+        <!-- Add more news items as needed -->
+    </div>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9201482064549311"
+    crossorigin="anonymous"></script>
+    <!-- Footer -->
+    <div class="footer">
+        <span class="date"></span>
+        <a href="https://twitter.com/coursehub" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="https://facebook.com/coursehub" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="https://instagram.com/coursehub" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        <p>© 2024 Course Hub. All rights reserved.</p>
+    </div>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" onclick="scrollToTop()">↑ Back to Top</button>
+
+    <script>
+        // JavaScript for dynamic date in the footer
+        document.querySelector('.footer .date').textContent = `Today's Date: ${new Date().toLocaleDateString()}`;
+
+        // JavaScript for back to top button
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.querySelector('.back-to-top').style.display = "block";
+            } else {
+                document.querySelector('.back-to-top').style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+</body>
+</html>

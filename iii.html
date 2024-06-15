@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course Hub</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+  }
+  .container {
+    max-width: 650px;
+    margin: auto;
+    padding: 20px;
+  }
+  .course-selection {
+    margin-bottom: 20px;
+  }
+  .course-card {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    display: none; /* Hidden by default */
+  }
+  .course-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  .payment-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .course-card {
+      width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="course-selection">
+  <label for="course">Select a Course:</label>
+  <select id="course" name="course" onchange="filterCourses(this)">
+    <option value="">--Select a Course--</option>
+    <option value="python3">Python</option>
+    <option value="javascript3">JavaScript</option>
+    <option value="java3">Java</option>
+    <option value="html3">HTML & CSS</option>
+    <option value="c lang.3">C Language</option>
+    <!-- Add more options for other courses -->
+  </select>
+</div>
+
+<!-- Course cards -->
+<div id="python3" class="course-card">
+  <img src="OIPmsxnsms.jpg" alt="Python Course" class="course-image">
+  Python Course Details
+  <button class="payment-button">Enroll Now</button>
+</div>
+<div id="javascript3" class="course-card">
+  <img src="OIPjnnmncxc.jpg" alt="JavaScript Course" class="course-image">
+  JavaScript Course Details
+  <button class="payment-button">Enroll Now</button>
+</div>
+<div id="java3" class="course-card">
+    <img src="bnbdhj.jpg" alt="JavaScript Course" class="course-image">
+    Java Course Details
+    <button class="payment-button">Enroll Now</button>
+  </div>
+  <div id="html3" class="course-card">
+    <img src="OIPbcmbxm.jpg" alt="JavaScript Course" class="course-image">
+    Html-css Course Details
+    <button class="payment-button">Enroll Now</button>
+  </div>
+  <div id="c lang.3" class="course-card">
+    <img src="hhbzjxyx.jpg" alt="JavaScript Course" class="course-image">
+    c Language Course Details
+    <button class="payment-button">Enroll Now</button>
+  </div>
+<!-- Add more course cards with images and payment buttons -->
+
+<script>
+function filterCourses(select) {
+  var value = select.value;
+  var courseCards = document.querySelectorAll('.course-card');
+  courseCards.forEach(function(card) {
+    card.style.display = 'none'; // Hide all cards
+  });
+  if (value) {
+    var selectedCard = document.getElementById(value);
+    selectedCard.style.display = 'block'; // Show the selected card
+  }
+}
+</script>
+
+</body>
+</html>

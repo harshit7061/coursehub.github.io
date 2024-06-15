@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course Hub Signup</title>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9201482064549311"
+     crossorigin="anonymous"></script>
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9201482064549311"
+     crossorigin="anonymous"></script>
+<style>
+  body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+  }
+  .signup-form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Added for consistent sizing */
+  }
+  input[type="text"]:focus,
+  input[type="tel"]:focus,
+  input[type="email"]:focus {
+    border-color: #3A8DFF;
+    outline: none;
+  }
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  @keyframes bg-animation {
+    from { background-position: 0 0; }
+    to { background-position: 100% 100%; }
+  }
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .signup-form {
+      margin: 20px;
+    }
+  }
+</style>
+
+</head>
+<body>
+
+<div class="header">
+  <!-- Replace 'logo.png' with the path to your logo image -->
+  <img  src="UjY85E-d_400x400.jpg" alt="Logo" style="max-width: 100px; border-radius: 50px;">
+  <h1>Course Hub</h1>
+</div>
+<form class="signup-form" id="signupForm" action="course.html"  target="_blank" name="submit-to-google-sheet">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="phone">Phone No:</label>
+  <input type="tel" id="phone" name="phone" required>
+
+  
+
+  <label for="email">Email ID:</label>
+  <input type="email" id="email" name="email" required>
+  
+  <input type="submit" value="Sign Up">
+</form>
+<script>
+   function validateForm() {
+    const emailInput = document.getElementById('email');
+    const phoneInput = document.getElementById('phone');
+
+    // Validate email
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (!emailPattern.test(emailInput.value)) {
+      alert('Please enter a valid email address.');
+      emailInput.focus();
+      return false;
+    }
+
+    // Validate phone number (10 digits)
+    const phonePattern = /^\d{10}$/;
+    if (!phonePattern.test(phoneInput.value)) {
+      alert('Please enter a valid 10-digit phone number.');
+      phoneInput.focus();
+      return false;
+    }
+
+    // Form is valid, allow submission
+    return true;
+  }
+  // Get the form element
+  
+
+  // Add an event listener for the 'submit' event
+  form.addEventListener('submit', function(event) {
+    // Prevent the default form submission
+    event.preventDefault();
+
+    // Validate the form data here
+    // If validation fails, return to prevent form submission
+    // ...
+
+    // If validation passes, submit the form data
+    const formData = new FormData(form);
+    fetch(form.action, {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+      // Handle success, such as displaying a success message
+      // or redirecting to another page
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      // Handle errors, such as displaying an error message to the user
+    });
+  });
+  
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxiREqgN4xog3SZXPiuKcjOWx9NqFaffREh2XXo5SzGzgdTq1OHEkaNN9Vo3NoJgymbug/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+</body>
+</html>

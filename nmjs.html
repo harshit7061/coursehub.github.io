@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course Hub</title>
+<style>
+  /* Base styles */
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+  }
+  .container {
+    max-width: 540px;
+    margin: auto;
+    padding: 20px;
+  }
+  .course-selection {
+    margin-bottom: 20px;
+  }
+  .course-card {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    display: none; /* Hidden by default */
+  }
+  .course-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  .course-price {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  .payment-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .course-card {
+      width: 100%;
+      padding: 20px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="course-selection">
+    <label for="course">Select a Course:</label>
+    <select id="course" name="course" onchange="showCourse(this.value)">
+      <option value="">--Select a Course--</option>
+      <option value="python">Python</option>
+      <option value="javascript">JavaScript</option>
+      <option value="java">Java</option>
+      <option value="htmlcss">HTML & CSS</option>
+      <option value="clang">C Language</option>
+      <!-- Add more options for other courses -->
+    </select>
+  </div>
+
+  <!-- Course cards -->
+  <div id="python" class="course-card">
+    <img src="OIPmsxnsms.jpg" alt="Python Course" class="course-image">
+    <h3>Python</h3>
+    <p>Learn Python programming.</p>
+    <div class="course-price">₹119</div>
+    <button class="payment-button">Enroll Now</button>
+  </div>
+  <div id="javascript" class="course-card">
+    <img src="OIPjnnmncxc.jpg" alt="JavaScript Course" class="course-image">
+    <h3>JavaScript</h3>
+    <p>Master web development with JavaScript.</p>
+    <div class="course-price">₹129</div>
+    <button class="payment-button">Enroll Now</button>
+  </div>
+  <!-- Add more course cards with images, prices, and payment buttons -->
+  <div id="java" class="course-card">
+    <img src="bnbdhj.jpg" alt="Java Course" class="course-image">
+    <h2>java</h2>
+    <p>Java Course Details</p>
+    <div class="course-price">₹129</div>
+    <button class="payment-button">Enroll Now</button>
+
+    <div id="htmlcss" class="course-card">
+      <img src="OIPbcmbxm.jpg" alt="htmlcss Course" class="course-image">
+      <h2>html-css</h2>
+     <p> Html-css Course Details</p>
+      <div class="course-price">₹129</div>
+    <button class="payment-button">Enroll Now</button>
+
+         
+      <div id="clang" class="course-card">
+      <img src="hhbzjxyx.jpg" alt="c lang. Course" class="course-image">
+      <h2>c language</h2>
+      <p>c Language Course Details</p>
+      <div class="course-price">₹119</div>
+      <button class="payment-button">Enroll Now</button>
+</div>
+
+<script>
+function showCourse(courseId) {
+  var courseCards = document.querySelectorAll('.course-card');
+  courseCards.forEach(function(card) {
+    card.style.display = 'none'; // Hide all cards
+  });
+  if (courseId) {
+    var selectedCard = document.getElementById(courseId);
+    selectedCard.style.display = 'block'; // Show the selected card
+  }
+}
+</script>
+
+</body>
+</html>

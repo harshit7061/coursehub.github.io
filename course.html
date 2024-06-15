@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course Hub</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="Header.js"></script>
+<script id="formape-js-embed" data-form-height="785" src="https://www.formape.com/app/form/embed.js"></script><script id="formape-js-katbh">FormApe.load("katbh");</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9201482064549311"
+     crossorigin="anonymous"></script>
+<style>
+  /* Add your CSS styling here */
+ 
+  .course-list { padding: 20px; }
+  .course { border: 1px solid #ddd; margin-bottom: 10px; padding: 10px; }
+  .buy-button { background-color: #5cb85c; color: white; padding: 10px; text-decoration: none; }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+  }
+
+  /* Header styles */
+  .header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+
+  
+        /* Header styles */
+        .header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Side navbar styles */
+        .sidenav {
+            width: 250px;
+            background-color: #222;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .sidenav a {
+            padding: 15px;
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .sidenav a:hover {
+            background-color: #444;
+        }
+
+               
+        .navbar-logo {
+            height: 70px; /* Adjust the size as needed */
+            margin: 12px;
+        }
+
+        
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 2;
+            top: 0;
+            right: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+        .sidebar .close-btn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        @media screen and (max-height: 450px) {
+          .sidebar {padding-top: 15px;}
+          .sidebar a {font-size: 18px;}
+        }
+#course-form {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for tablets */
+@media (min-width: 600px) {
+    #course-form {
+        padding: 40px;
+    }
+}
+
+/* Styles for desktops */
+@media (min-width: 1024px) {
+    #course-form {
+        padding: 60px;
+    }
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+/* Example link styles */
+a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #0074d9;
+}
+/* Example button styles */
+button {
+    background-color: #0074d9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #607082;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+li {
+    margin-bottom: 10px; /* Adds space between list items */
+}
+.responsive-spacing {
+    margin: 1rem; /* Responsive margin */
+    padding: 2% 5%; /* Responsive padding */
+}
+.center-vertically {
+    display: flex;
+    align-items: center;
+}
+.my-element {
+    padding: 20px; /* Applies 20px padding on all sides */
+}
+/* Base styles */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.search-button {
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column;
+    }
+
+    .search-input,
+    .search-button {
+        width: 90%;
+        border-radius: 5px;
+    }
+
+    .search-button {
+        margin-top: 10px;
+    }
+}
+.footer {
+    background-color: #102027;
+    color: #ffffff;
+    padding: 40px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .footer-branding {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .footer-branding img {
+    max-width: 150px;
+    margin-bottom: 10px;
+  }
+  .footer-branding h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #f9a825;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+  .footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px 0;
+  }
+  .footer-section h3 {
+    margin-bottom: 15px;
+  }
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  .footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .footer-section ul li a:hover {
+    color: #f9a825;
+  }
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+  }
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer-branding, .footer-section {
+      margin: 20px 0;
+    }
+  }
+  .subscribe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .subscribe-form input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 3px;
+  }
+  .subscribe-form input[type="submit"] {
+    background-color: #f9a825;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  .subscribe-form input[type="submit"]:hover {
+    background-color: #e0a106;
+  }
+  @media (max-width: 768px) {
+    .subscribe-form {
+      align-items: center;
+    }
+    .subscribe-form input[type="email"] {
+      width: 100%;
+    }
+  }
+  #searchBar {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+#searchBar:focus {
+  outline: none;
+  border-color: #5cb85c;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #searchBar {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  #searchBar {
+    width: 90%;
+  }
+}
+        .cart-icon {
+  cursor: pointer;
+}
+
+.cart-count {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 8px;
+  margin-left: 5px;
+}
+
+#cart-dropdown {
+  background-color: white;
+  color: black;
+  position: absolute;
+  right: 20px;
+  width: 300px;
+  border: 1px solid #ddd;
+  display: none;
+  z-index: 1;
+}
+
+#cart-items {
+  list-style: none;
+  padding: 0;
+}
+
+#cart-items li {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+
+.course-container {
+  padding: 20px;
+}
+
+.course {
+  background-color: white;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+.course h3 {
+  margin-top: 0;
+}
+
+button {
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .course-container {
+    padding: 10px;
+  }
+
+  .course {
+    padding: 10px;
+  }
+
+  button {
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header, .course-container {
+    text-align: center;
+  }
+
+  .cart-icon {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+#language-select {
+    margin: 10px;
+}
+
+.container {
+    max-width: 740px;
+    margin: auto;
+    padding: 20px;
+  }
+.course-card {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    display: none; /* Hidden by default */
+  }
+  .course-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  .course-price {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  .payment-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .course-card {
+      width: 100%;
+      padding: 20px;
+    }
+  }
+
+.course-selection {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            margin-bottom: 10px;
+        }
+
+        label {
+            font-size: 25px;
+            color: #333;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        select option {
+            background-color: white;
+            color: green;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .course-selection {
+                width: 90%;
+                padding: 10px;
+            }
+
+            label, select {
+                font-size: 16px;
+            }
+        }
+        .course-description {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-description h2 {
+            color: #4CAF50;
+        }
+
+        .course-description p {
+            color: #333;
+            line-height: 1.6;
+        }
+/* Pop-up styles */
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: -400px; /* Initially hidden */
+    width: 400px;
+    height: 100%;
+    background: transparent; /* No background color */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: left 0.5s;
+    z-index: 1;
+  }
+  .popup-content {
+    background: #ffffff; /* White background */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .popup-content h2 {
+    margin-bottom: 15px;
+    color: #4CAF50; /* Green text */
+  }
+  .popup-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #4CAF50; /* Green text */
+  }
+  .show-popup {
+    left: 0; /* Slide in from the left */
+  }
+  #closePopup {
+    background-color: #ffffff; /* White background for the button */
+    color: #4CAF50; /* Green text to match the pop-up */
+    border: 2px solid #4CAF50; /* Green border */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  #closePopup:hover {
+    background-color: #4CAF50; /* Green background on hover */
+    color: #ffffff; /* White text on hover */
+  }
+  .welcome-message {
+            text-align: center;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .course-description {
+            font-size: 18px;
+            color: #333;
+            margin-top: 15px;
+        }
+/* Base CSS for Announcement Bar */
+.announcement-bar {
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+   /* Higher than the nav bar to ensure visibility */
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.click-now-btn {
+  background-color: #ff9800; /* Orange background for visibility */
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.click-now-btn:hover {
+  background-color: #e65100; /* Darker orange on hover */
+}
+
+.navigation-bar {
+  position: sticky;
+  top: 50px; /* Height of the announcement bar */
+  z-index: 1000;
+  /* Rest of your navigation bar styles */
+}
+
+/* Responsive Design for Tablets */
+@media (max-width: 768px) {
+  .announcement-bar p {
+    font-size: 16px;
+    padding: 8px 0;
+  }
+  
+  .click-now-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+}
+
+/* Responsive Design for Mobile Phones */
+@media (max-width: 480px) {
+  .announcement-bar p {
+    font-size: 14px;
+    padding: 6px 0;
+  }
+  
+  .click-now-btn {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+}
+
+
+</style>
+</head>
+<body>
+  <!-- Pop-up HTML -->
+<div class="popup-container" id="popup">
+  <div class="popup-content">
+    <h2>Hurry up! Limited time offer</h2>
+    <p>All courses now at just ₹349!</p>
+    <!-- Razorpay Payment Button -->
+    <form id="paymentButton">
+    <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_OMZ1jJ2WTUVkGr" async> </script> </form>
+    <button id="closePopup">Close</button>
+  </div>
+</div>
+
+  <div class="navbar" style="background-color: #333;">
+    <img src="UjY85E-d_400x400.jpg"style="border-radius:50px; alt="Logo" class="navbar-logo">
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">×</a>
+      <a href="course.html">Home</a>
+      <a href="course.html">Courses</a>
+      <a href="news.html">News</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">contact us</a>
+    </div> 
+    
+    <div>
+      <button style="background-color: #454343;  position: absolute; /* or 'fixed' if you want it to stay in place on scroll */
+      top: 0;
+      right: 0;
+      margin: 16px; " onclick="openNav()"> ☰ </button>
+    </div> 
+</div>
+<div class="header">
+  <h1>Welcome to CourseHub</h1>
+  <p>Find the course that's right for you!</p>
+
+  </div>
+</div>
+
+<!-- Special Offer Announcement Bar -->
+<div class="announcement-bar">
+  <p>🚀 Special Offer! Get MERN Stack Courses for just ₹249 with notes and practice problems! <a href="mern.html" class="click-now-btn">Click Now</a>🚀</p>
+</div>
+
+<!-- Navigation Bar -->
+<nav class="navigation-bar">
+  <!-- Your navigation content -->
+</nav>
+
+
+
+<!-- Add this search bar HTML above your courses -->
+<div class="search-container">
+  <input type="text" id="searchBar" placeholder="Search courses.." onkeyup="filterCourses()">
+</div>
+
+<div class="course-container" id="courseContainer">
+  <!-- Courses will be dynamically inserted here -->
+  <h1>Available Courses</h1>
+  <div class="course">
+    <h3>Java Course</h3>
+    <p>Learn Java programming fundamentals.</p>
+    <p>Price: ₹59</p>
+    <button onclick="location.href='https://rzp.io/l/UDYV9qXwj8'" type="button">Enroll Now</button>
+</div>
+
+  <div class="course">
+    <h3>Python Course</h3>
+    <p>Explore Python for data science and web development.</p><br>
+    <p>Price: ₹49</p>
+    <button onclick="location.href='https://rzp.io/l/L9Nl43Z'" type="button">Enroll Now</button>
+  </div>
+  <div class="course">
+      <h3>C++ Course</h3>
+      <p>Master C++ programming language.</p><br>
+      <p>price:49 </p>
+      <button onclick="location.href='https://rzp.io/l/uiKhvPZ'" type="button">Enroll Now</button>
+  </div>
+  <div class="course">
+    <h3>javascript</h3>
+    <p>Explore javascript for web development.</p><br>
+    <p>price: 59</p>
+    <button onclick="location.href='https://rzp.io/l/06DN072'" type="button">Enroll Now</button>
+</div>
+<div class="course">
+  <h3>react js</h3>
+  <p>react js is a framework of javascript.</p><br>
+  <p>price:49 </p>
+  <button onclick="location.href='https://rzp.io/l/eoKAfDt'" type="button">Enroll Now</button>
+</div>
+<div class="course">
+  <h3>node js</h3>
+  <p>It is an open-source, cross-platform JavaScript runtime environment .</p><br>
+  <p>price:59 </p>
+  <button onclick="location.href='https://rzp.io/l/d00SSaR'" type="button">Enroll Now</button>
+</div>
+<div class="course">
+  <h3>Html-css</h3>
+  <p>clear basis structure and styleing.</p><br>
+  <p>price: 59</p>
+  <button onclick="location.href='https://rzp.io/l/gLEm6hV'" type="button">Enroll Now</button>
+</div>
+<div class="course">
+  <h3>mongodb</h3>
+  <p>Sacure and manage your database.</p><br>
+  <p>price:69 </p>
+  <button onclick="location.href='https://rzp.io/l/KXXTiYE'" type="button">Enroll Now</button>
+</div>
+<div class="course">
+  <h3>Rust</h3>
+  <p>It is a multi-paradigm, general-purpose programming language.</p><br>
+  <p>price:69 </p>
+  <button onclick="location.href='https://rzp.io/l/NpLCuiTLb'" type="button">Enroll Now</button>
+</div>
+<div class="course">
+  <h3>c language</h3>
+  <p>Clear the fundamental of coding with c.</p><br>
+  <p class="price">Price: <s>₹49</s> ₹39</p>
+  <button onclick="location.href='https://rzp.io/l/LAH2pftm'" type="button">Enroll Now</button>
+</div>
+<div class="course">
+  <h3>express js</h3>
+  <p>Express.js, a powerful web application framework for Node.js..</p><br>
+  <p>price:49 </p>
+  <button onclick="location.href='https://rzp.io/l/CFMF4YyX'" type="button">Enroll Now</button>
+</div>
+</div>
+</div>
+<br>
+<div style="text-align: center;  background-color: white; max-width: 800px; margin: auto; font-family: 'Arial', sans-serif;">
+  <br>
+  <h2 style="color: #2a9d8f; margin-bottom: 20px;">Data Structure and Algorithms Notes</h2>
+  <div style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; padding: 20px;">
+    <iframe src="https://online.fliphtml5.com/evsxw/ygnm/" style="width: 100%; height: 500px;" frameborder="0"></iframe>
+  </div>
+  <p style="margin-top: 20px; color: #333;">Explore our comprehensive DSA notes, designed for both beginners and advanced programmers. Click on the topics within the document to delve deeper into specific sections.</p><br>
+</div>
+
+
+<br>
+<div class="container">
+  <div class="welcome-message">
+      <h2>VIDEO COURSES</h2>
+      Comprehensive courses with notes, practice problems, and top-quality videos
+  <div class="container">
+  <div class="course-selection">
+    <label for="course">Select a Course:</label>
+    <select id="course" name="course" onchange="showCourse(this.value)">
+      <option value="">--Select a Course--</option>
+      <option value="python">Python</option>
+      <option value="javascript">JavaScript</option>
+      <option value="java">Java</option>
+      <option value="htmlcss">HTML & CSS</option>
+      <option value="clang">C Language</option>
+      <!-- Add more options for other courses -->
+    </select>
+  </div> 
+</div>
+<!-- Course cards -->
+<div id="python" class="course-card">
+  <img src="OIPmsxnsms.jpg" alt="Python Course" class="course-image">
+  <h3>Python</h3>
+  <p>Learn Python programming.</p>
+  <div class="course-price">₹119</div>
+  <button onclick="window.open('https://rzp.io/l/jIy4VfSO', '_blank');" class="payment-button">Enroll Now</button>
+</div>
+<div id="javascript" class="course-card">
+  <img src="OIPjnnmncxc.jpg" alt="JavaScript Course" class="course-image">
+  <h3>JavaScript</h3>
+  <p>Master web development with JavaScript.</p>
+  <div class="course-price">₹129</div>
+  <button onclick="window.open('https://rzp.io/l/leKYuxqT', '_blank');" class="payment-button">Enroll Now</button>
+</div>
+<!-- Add more course cards with images, prices, and payment buttons -->
+<div id="java" class="course-card">
+  <img src="bnbdhj.jpg" alt="Java Course" class="course-image">
+  <h2>java</h2>
+  <p>Java Course Details</p>
+  <div class="course-price">₹129</div>
+  <button onclick="window.open('https://rzp.io/l/4kPYTfZh', '_blank');" class="payment-button">Enroll Now</button>
+</div>
+  <div id="htmlcss" class="course-card">
+    <img src="OIPbcmbxm.jpg" alt="htmlcss Course" class="course-image">
+    <h2>html-css</h2>
+   <p> Html-css Course Details</p>
+    <div class="course-price">₹129</div>
+  <button  onclick="window.open('https://rzp.io/l/i9gp9vLAt0', '_blank');" class="payment-button">Enroll Now</button>
+</div>
+       
+    <div id="clang" class="course-card">
+    <img src="hhbzjxyx.jpg" alt="clang Course" class="course-image">
+    <h2>c language</h2>
+    <p>c Language Course Details</p>
+    <div class="course-price">₹119</div>
+    <button onclick="window.open('https://rzp.io/l/VLxWC1TXb6', '_blank');" class="payment-button">Enroll Now</button>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9201482064549311"
+     crossorigin="anonymous"></script>
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9201482064549311"
+     crossorigin="anonymous"></script>
+
+<footer   class="footer">
+  <div  class="footer-container">
+    <div class="footer-branding">
+      <img src="UjY85E-d_400x400.jpg"style="border-radius:50px; alt="Course Hub Logo">
+      <h1>Course Hub</h1>
+    </div>
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="course.html">Courses</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <ul>
+        <li><a href="https://www.facebook.com/CourseHub">Facebook</a></li>
+        <li><a href="https://www.twitter.com/CourseHub">Twitter</a></li>
+        <li><a href="https://www.instagram.com/CourseHub">Instagram</a></li>
+      </ul>
+    </div>
+    <div class="subscribe-form">
+      <form id="subscribeForm">
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <input type="submit" value="Subscribe">
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p id="copyright"></p>
+  </div>
+
+</footer>
+
+<script>
+function showCourse(courseId) {
+var courseCards = document.querySelectorAll('.course-card');
+courseCards.forEach(function(card) {
+  card.style.display = 'none'; // Hide all cards
+});
+if (courseId) {
+  var selectedCard = document.getElementById(courseId);
+  selectedCard.style.display = 'block'; // Show the selected card
+}
+}
+</script>
+<script>
+  // Add event listener to Razorpay payment success event
+document.addEventListener('payment.success', function(event) {
+  // Get the payment ID from the event
+  var paymentId = event.detail.razorpay_payment_id;
+  // Verify the payment on your server
+  verifyPayment(paymentId);
+});
+
+function verifyPayment(paymentId) {
+  // Make an AJAX call to your server to verify the payment
+  // Replace 'YOUR_VERIFICATION_ENDPOINT' with your server's verification endpoint
+  var verificationUrl = 'YOUR_VERIFICATION_ENDPOINT';
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', verificationUrl, true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      // If the payment is verified, show the download link
+      var downloadLink = document.getElementById('downloadLink');
+      downloadLink.href = 'https://online.fliphtml5.com/evsxw/ebbc/';
+      downloadLink.style.display = 'block';
+    } else {
+      // Handle payment verification failure
+      alert('Payment verification failed. Please try again.');
+    }
+  };
+  xhr.send(JSON.stringify({paymentId: paymentId}));
+}
+</script>
+<script>
+
+ 
+         // Add this JavaScript function to filter courses
+         function filterCourses() {
+    var input, filter, courseContainer, courses, h3, i, txtValue;
+    input = document.getElementById('searchBar');
+    filter = input.value.toUpperCase();
+    courseContainer = document.getElementById('courseContainer');
+    courses = courseContainer.getElementsByClassName('course');
+    
+    for (i = 0; i < courses.length; i++) {
+      h3 = courses[i].getElementsByTagName('h3')[0];
+      txtValue = h3.textContent || h3.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        courses[i].style.display = "";
+      } else {
+        courses[i].style.display = "none";
+      }
+    }
+  }
+  
+        
+// Example JavaScript for a newsletter sign-up form
+document.addEventListener('DOMContentLoaded', function() {
+  var newsletterForm = document.getElementById('newsletter-form');
+  var newsletterButton = document.getElementById('newsletter-button');
+
+  newsletterButton.addEventListener('click', function() {
+    newsletterForm.style.display = (newsletterForm.style.display === 'none') ? 'block' : 'none';
+  });
+});
+ // Get the current year
+ const currentYear = new Date().getFullYear();
+      
+      // Display the dynamic copyright year
+      document.getElementById('copyright').textContent = `© ${currentYear} Course Hub. All Rights Reserved.`;
+      var mybutton = document.getElementById("backToTop");
+
+
+// JavaScript to handle the subscription form submission
+document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  var email = document.getElementById('email').value;
+  // Here you would typically send the email to your server or a third-party email service
+  alert('Thank you for subscribing, ' + email + '!');
+});
+
+ function openNav() {
+  document.getElementById("mySidebar").style.width = "270px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+}
+
+
+
+</script>
+
+<script>
+  // Show the pop-up after 10 seconds
+  setTimeout(function() {
+   document.getElementById('popup').classList.add('show-popup');
+ }, 10000); // 10 seconds in milliseconds
+
+ // Close the pop-up
+ document.getElementById('closePopup').addEventListener('click', function() {
+   document.getElementById('popup').classList.remove('show-popup');
+ });
+</script>
+
+
+
+</body>
+</html>
